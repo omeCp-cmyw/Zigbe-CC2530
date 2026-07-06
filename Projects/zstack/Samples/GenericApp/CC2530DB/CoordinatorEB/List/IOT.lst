@@ -1,0 +1,1257 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         09/Jan/2022  14:29:42 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\Source\IOT.c                               #
+#    Command line       =  -f D:\test_nb\代码\多终端\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoo #
+#                          rd.cfg (-DCPU32MHZ -DROOT=__near_func              #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f D:\test_nb\代码\多终端\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCon #
+#                          fig.cfg (-DZIGBEEPRO -DSECURE=0                    #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\test_nb\代码\多终端\Proj #
+#                          ects\zstack\Samples\GenericApp\Source\IOT.c -D     #
+#                          ZTOOL_P1 -D LCD_SUPPORTED -lC                      #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\CoordinatorEB\List\ -lA           #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\CoordinatorEB\List\               #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\CoordinatorEB\Obj\ -e             #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\test_nb\代码\多终端\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\ -I D:\test_nb\代码\多终端\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\..\Source #
+#                          \ -I D:\test_nb\代码\多终端\Projects\zstack\Sample #
+#                          s\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I  #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\hal\inc #
+#                          lude\ -I D:\test_nb\代码\多终端\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\hal\target\CC2530EB\ -I                          #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\mac\inc #
+#                          lude\ -I D:\test_nb\代码\多终端\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\mac\high_level\ -I D:\test_nb\代码\多终端\Projec #
+#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
+#                          ..\Components\mac\low_level\srf04\ -I              #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\mac\low #
+#                          _level\srf04\single_chip\ -I                       #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\mt\ -I  #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\osal\in #
+#                          clude\ -I D:\test_nb\代码\多终端\Projects\zstack\S #
+#                          amples\GenericApp\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\saddr\ -I D:\test_nb\代码\多终端\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\stack\a #
+#                          f\ -I D:\test_nb\代码\多终端\Projects\zstack\Sampl #
+#                          es\GenericApp\CC2530DB\..\..\..\..\..\Components\s #
+#                          tack\nwk\ -I D:\test_nb\代码\多终端\Projects\zstac #
+#                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sapi\ -I D:\test_nb\代码\多终端\Projec #
+#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
+#                          ..\Components\stack\sec\ -I                        #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\stack\s #
+#                          ys\ -I D:\test_nb\代码\多终端\Projects\zstack\Samp #
+#                          les\GenericApp\CC2530DB\..\..\..\..\..\Components\ #
+#                          stack\zdo\ -I D:\test_nb\代码\多终端\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\Comp #
+#                          onents\zmac\ -I D:\test_nb\代码\多终端\Projects\zs #
+#                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\zmac\f8w\ -Ohz --require_prototypes       #
+#    List file          =  D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\CoordinatorEB\List\IOT.lst        #
+#    Object file        =  D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\CoordinatorEB\Obj\IOT.r51         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\test_nb\代码\多终端\Projects\zstack\Samples\GenericApp\Source\IOT.c
+      1          #include <ioCC2530.h>
+      2          #include "OnBoard.h"
+      3          #include "IOT.h"
+      4          #include "delay.h"
+      5          #include "ZComDef.h"
+      6          #include "ZGlobals.h"
+      7          #include "OnBoard.h"
+      8          #include "OSAL.h"
+      9          #include "MT.h"
+     10          #include "MT_SYS.h"
+     11          #include "DebugTrace.h"
+     12          
+     13          /* Hal */
+     14          #include "hal_lcd.h"
+     15          #include "hal_mcu.h"
+     16          #include "hal_timer.h"
+     17          #include "hal_key.h"
+     18          #include "hal_led.h"
+     19          #include "hal_uart.h"
+     20          #include "string.h"
+     21          #include "stdlib.h"
+     22          #include "stdio.h"
+     23          /* Allow access macRandomByte() */
+     24          #include "mac_radio_defs.h"
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     25          unsigned char uartbuf2[200]={0x00};
+   \                     uartbuf2:
+   \   000000                DS 200
+   \   0000C8                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     26          unsigned char uchBuf[10] = {0x00};
+   \                     uchBuf:
+   \   000000                DS 10
+   \   00000A                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     27          stWiFi WiFiStatus;
+   \                     WiFiStatus:
+   \   000000                DS 23
+   \   000017                REQUIRE __INIT_XDATA_Z
+     28          extern void LCD_P8x16Str(unsigned char x, unsigned char y,unsigned char ch[]);
+     29          extern void HalLcdDisplayPercentBar( char *title, uint8 value );
+     30          extern void LCD_P16x16Ch(unsigned char x, unsigned char y, unsigned char N);
+     31          
+     32          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     33          void UartInitPort0(void )
+   \                     UartInitPort0:
+     34          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 29
+   \   000004   74E3         MOV     A,#-0x1d
+   \   000006   12....       LCALL   ?ALLOC_XSTACK8
+     35          
+     36                    halUARTCfg_t uartConfig;//顶一个串口结构体
+     37                    uartConfig.configured             =TRUE;//串口配置为真
+   \   000009   85..82       MOV     DPL,?XSP + 0
+   \   00000C   85..83       MOV     DPH,?XSP + 1
+   \   00000F   7401         MOV     A,#0x1
+   \   000011   F0           MOVX    @DPTR,A
+     38                    uartConfig.baudRate               =HAL_UART_BR_115200;//波特率为115200
+   \   000012   12....       LCALL   ?XSTACK_DISP0_8
+   \   000015   7404         MOV     A,#0x4
+   \   000017   F0           MOVX    @DPTR,A
+     39                    uartConfig.flowControl            =FALSE;//流控制为假
+   \   000018   7402         MOV     A,#0x2
+   \   00001A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00001D   E4           CLR     A
+   \   00001E   F0           MOVX    @DPTR,A
+     40                    uartConfig.callBackFunc       =    rxCB;
+   \   00001F   741B         MOV     A,#0x1b
+   \   000021   12....       LCALL   ?XSTACK_DISP0_8
+   \   000024   74..         MOV     A,#??rxCB?relay & 0xff
+   \   000026   F0           MOVX    @DPTR,A
+   \   000027   A3           INC     DPTR
+   \   000028   74..         MOV     A,#(??rxCB?relay >> 8) & 0xff
+   \   00002A   12....       LCALL   ?Subroutine5 & 0xFFFF
+     41                    HalUARTOpen(HAL_UART_PORT_0,&uartConfig);// 打开串口0
+   \                     ??CrossCallReturnLabel_15:
+   \   00002D   7900         MOV     R1,#0x0
+   \   00002F                REQUIRE ?Subroutine0
+   \   00002F                ; // Fall through to label ?Subroutine0
+     42          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ??HalUARTOpen?relay
+   \   000003   741D         MOV     A,#0x1d
+   \   000005   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000008                REQUIRE ??Subroutine8_0
+   \   000008                ; // Fall through to label ??Subroutine8_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine8_0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001                ; Setup parameters for call to function HalUARTOpen
+   \   000001                ; Setup parameters for call to function HalUARTOpen
+   \   000001   85..82       MOV     DPL,?XSP + 0
+   \   000004   85..83       MOV     DPH,?XSP + 1
+   \   000007   AA82         MOV     R2,DPL
+   \   000009   AB83         MOV     R3,DPH
+   \   00000B   22           RET
+     43          //下面这个回调函数是我加的，从串口0读取n个字符，放进uartbuf
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     44          static void rxCB(uint8 port,uint8 event)
+   \                     rxCB:
+     45          {
+   \   000000   74F5         MOV     A,#-0xb
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 128
+   \   000005   7480         MOV     A,#-0x80
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+     46            //int ipos = 0;  //!< 用于偏移量
+     47            //unsigned char szEndID[2] = {0};//!< 用来存储是第几个终端
+     48            unsigned char index=0,uartbuf[128]={0x00};
+   \   00000A   7E00         MOV     R6,#0x0
+   \   00000C   85..82       MOV     DPL,?XSP + 0
+   \   00000F   85..83       MOV     DPH,?XSP + 1
+   \   000012   AC82         MOV     R4,DPL
+   \   000014   AD83         MOV     R5,DPH
+   \   000016   7583..       MOV     DPH,#(`?<Constant {0}>` >> 8) & 0xff
+   \   000019   7582..       MOV     DPL,#`?<Constant {0}>` & 0xff
+   \   00001C   7480         MOV     A,#-0x80
+   \   00001E   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+   \   000021   801C         SJMP    ??rxCB_0
+     49           while (Hal_UART_RxBufLen(0)) //!< 检测串口数据是否接收完成
+     50            {
+     51              HalUARTRead (0,&uartbuf[index], 1);  //!< 把数据接收放到buf中
+   \                     ??rxCB_1:
+   \   000023                ; Setup parameters for call to function HalUARTRead
+   \   000023   7C01         MOV     R4,#0x1
+   \   000025   7D00         MOV     R5,#0x0
+   \   000027   8E..         MOV     ?V0 + 0,R6
+   \   000029   85..82       MOV     DPL,?XSP + 0
+   \   00002C   85..83       MOV     DPH,?XSP + 1
+   \   00002F   E582         MOV     A,DPL
+   \   000031   25..         ADD     A,?V0 + 0
+   \   000033   FA           MOV     R2,A
+   \   000034   E583         MOV     A,DPH
+   \   000036   3400         ADDC    A,#0x0
+   \   000038   FB           MOV     R3,A
+   \   000039   7900         MOV     R1,#0x0
+   \   00003B   12....       LCALL   ??HalUARTRead?relay
+     52              index++;                           //!< 记录字符数
+   \   00003E   0E           INC     R6
+     53            }
+   \                     ??rxCB_0:
+   \   00003F                ; Setup parameters for call to function Hal_UART_RxBufLen
+   \   00003F   7900         MOV     R1,#0x0
+   \   000041   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_20:
+   \   000044   70DD         JNZ     ??rxCB_1
+     54           if(strlen((char *)uartbuf)!=0)
+   \   000046                ; Setup parameters for call to function strlen
+   \   000046   85..82       MOV     DPL,?XSP + 0
+   \   000049   85..83       MOV     DPH,?XSP + 1
+   \   00004C   AA82         MOV     R2,DPL
+   \   00004E   AB83         MOV     R3,DPH
+   \   000050   12....       LCALL   ??strlen?relay
+   \   000053   8B..         MOV     ?V0 + 1,R3
+   \   000055   EA           MOV     A,R2
+   \   000056   45..         ORL     A,?V0 + 1
+   \   000058   6032         JZ      ??rxCB_2
+     55           {
+     56              /*sprintf((char *)szEndID,"%d",ENDNUM);
+     57              ipos = strlen((char *)szEndID);//!< 用于做偏移量的使用
+     58              osal_memcpy(uchBuf,szEndID,ipos);//!< 先保存
+     59              //!< 从串口接受要发送的数据
+     60              osal_memcpy(uchBuf+ipos,uartbuf,strlen((char *)uartbuf));*/
+     61             osal_memcpy(uchBuf,uartbuf,strlen((char *)uartbuf));
+   \   00005A                ; Setup parameters for call to function osal_memcpy
+   \   00005A   85..82       MOV     DPL,?XSP + 0
+   \   00005D   85..83       MOV     DPH,?XSP + 1
+   \   000060   A982         MOV     R1,DPL
+   \   000062   AA83         MOV     R2,DPH
+   \   000064   89..         MOV     ?V0 + 0,R1
+   \   000066   8A..         MOV     ?V0 + 1,R2
+   \   000068   75..00       MOV     ?V0 + 2,#0x0
+   \   00006B   78..         MOV     R0,#?V0 + 0
+   \   00006D   12....       LCALL   ?PUSH_XSTACK_I_THREE
+   \   000070                ; Setup parameters for call to function strlen
+   \   000070   7403         MOV     A,#0x3
+   \   000072   12....       LCALL   ?XSTACK_DISP0_8
+   \   000075   AA82         MOV     R2,DPL
+   \   000077   AB83         MOV     R3,DPH
+   \   000079   12....       LCALL   ??strlen?relay
+   \   00007C   EA           MOV     A,R2
+   \   00007D   FC           MOV     R4,A
+   \   00007E   EB           MOV     A,R3
+   \   00007F   FD           MOV     R5,A
+   \   000080   7A..         MOV     R2,#uchBuf & 0xff
+   \   000082   7B..         MOV     R3,#(uchBuf >> 8) & 0xff
+   \   000084   12....       LCALL   ??osal_memcpy?relay
+   \   000087   7403         MOV     A,#0x3
+   \   000089   12....       LCALL   ?DEALLOC_XSTACK8
+     62           }
+     63          }
+   \                     ??rxCB_2:
+   \   00008C   7480         MOV     A,#-0x80
+   \   00008E   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000091   7F03         MOV     R7,#0x3
+   \   000093   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   12....       LCALL   ??Hal_UART_RxBufLen?relay
+   \   000003   8B..         MOV     ?V0 + 1,R3
+   \   000005   EA           MOV     A,R2
+   \   000006   45..         ORL     A,?V0 + 1
+   \   000008   22           RET
+     64          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     65          void UartInitPort1( halUARTCBack_t SerialCallBack )//配置USART1接到IOT模块
+   \                     UartInitPort1:
+     66          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 29
+   \   000004   74E3         MOV     A,#-0x1d
+   \   000006   12....       LCALL   ?ALLOC_XSTACK8
+     67            halUARTCfg_t uartConfig;
+     68          
+     69            // configure UART
+     70            uartConfig.configured           = TRUE;
+   \   000009   85..82       MOV     DPL,?XSP + 0
+   \   00000C   85..83       MOV     DPH,?XSP + 1
+   \   00000F   7401         MOV     A,#0x1
+   \   000011   F0           MOVX    @DPTR,A
+     71            uartConfig.configured             =TRUE;//串口配置为真
+     72            uartConfig.baudRate               =HAL_UART_BR_115200;//波特率为115200
+   \   000012   12....       LCALL   ?XSTACK_DISP0_8
+   \   000015   7404         MOV     A,#0x4
+   \   000017   F0           MOVX    @DPTR,A
+     73            uartConfig.flowControl            =FALSE;//流控制为假
+   \   000018   7402         MOV     A,#0x2
+   \   00001A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00001D   E4           CLR     A
+   \   00001E   F0           MOVX    @DPTR,A
+     74            uartConfig.callBackFunc         = SerialCallBack;
+   \   00001F   741B         MOV     A,#0x1b
+   \   000021   12....       LCALL   ?XSTACK_DISP0_8
+   \   000024   EA           MOV     A,R2
+   \   000025   F0           MOVX    @DPTR,A
+   \   000026   A3           INC     DPTR
+   \   000027   EB           MOV     A,R3
+   \   000028   12....       LCALL   ?Subroutine5 & 0xFFFF
+     75            // start UART
+     76            // Note: Assumes no issue opening UART port.
+     77            HalUARTOpen( HAL_UART_PORT_1, &uartConfig );
+   \                     ??CrossCallReturnLabel_16:
+   \   00002B   7901         MOV     R1,#0x1
+   \   00002D   02....       LJMP    ?Subroutine0 & 0xFFFF
+     78          
+     79          }
+     80          
+     81          
+     82          //串口接收函数 大部分的时候都在这里面做 模块的反馈信息
+     83          //下面这个回调函数是我加的，从串口1读取n个字符，放进uartbuf
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     84           void SerialCallBack(uint8 port,uint8 event)
+   \                     SerialCallBack:
+     85          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     86          
+     87            unsigned char unflag=0,j=0;
+   \   000005   7F00         MOV     R7,#0x0
+   \   000007   7E00         MOV     R6,#0x0
+   \   000009   8018         SJMP    ??SerialCallBack_0
+     88            //HalUARTRead(0,uartbuf,1);
+     89            while (Hal_UART_RxBufLen(1)) //检测串口数据是否接收完成
+     90            {
+     91              HalUARTRead (1,&uartbuf2[j], 1);  //把数据接收放到buf中
+   \                     ??SerialCallBack_1:
+   \   00000B                ; Setup parameters for call to function HalUARTRead
+   \   00000B   7C01         MOV     R4,#0x1
+   \   00000D   7D00         MOV     R5,#0x0
+   \   00000F   8E..         MOV     ?V0 + 0,R6
+   \   000011   74..         MOV     A,#uartbuf2 & 0xff
+   \   000013   25..         ADD     A,?V0 + 0
+   \   000015   FA           MOV     R2,A
+   \   000016   74..         MOV     A,#(uartbuf2 >> 8) & 0xff
+   \   000018   3400         ADDC    A,#0x0
+   \   00001A   FB           MOV     R3,A
+   \   00001B   7901         MOV     R1,#0x1
+   \   00001D   12....       LCALL   ??HalUARTRead?relay
+     92              j++;                           //记录字符数
+   \   000020   0E           INC     R6
+     93              unflag=1;                         //已经从串口接收到信息
+   \   000021   7F01         MOV     R7,#0x1
+     94            } 
+   \                     ??SerialCallBack_0:
+   \   000023                ; Setup parameters for call to function Hal_UART_RxBufLen
+   \   000023   7901         MOV     R1,#0x1
+   \   000025   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_21:
+   \   000028   70E1         JNZ     ??SerialCallBack_1
+     95           
+     96           if(unflag)//收到数据了 收据全部收完了
+   \   00002A   EF           MOV     A,R7
+   \   00002B   6017         JZ      ??SerialCallBack_2
+     97           {
+     98              IOT_RecdataPut();          //对模块接收到的数据进行处理
+   \   00002D                ; Setup parameters for call to function IOT_RecdataPut
+   \   00002D   12....       LCALL   ??IOT_RecdataPut?relay
+     99              HalUARTWrite(0,uartbuf2,j); //将接收到的数据打印出来
+   \   000030                ; Setup parameters for call to function HalUARTWrite
+   \   000030   8E..         MOV     ?V0 + 0,R6
+   \   000032   AC..         MOV     R4,?V0 + 0
+   \   000034   7D00         MOV     R5,#0x0
+   \   000036   7A..         MOV     R2,#uartbuf2 & 0xff
+   \   000038   7B..         MOV     R3,#(uartbuf2 >> 8) & 0xff
+   \   00003A   7900         MOV     R1,#0x0
+   \   00003C   12....       LCALL   ??HalUARTWrite?relay
+    100              WiFiStatus.Reclen=j;       //获取接收到的数据长度
+   \   00003F   EE           MOV     A,R6
+   \   000040   90....       MOV     DPTR,#WiFiStatus + 2
+   \   000043   F0           MOVX    @DPTR,A
+    101             }
+    102           }
+   \                     ??SerialCallBack_2:
+   \   000044                REQUIRE ?Subroutine1
+   \   000044                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    103          //unsigned char isBUSY=0; //是否切换到手动模式       
+    104          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    105          void IOT_WiFiInit(void)//初始化IOT 
+   \                     IOT_WiFiInit:
+    106          { 
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    107            switch(WiFiStatus.Status)
+   \   000004   90....       MOV     DPTR,#WiFiStatus
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   6008         JZ      ??IOT_WiFiInit_0
+   \   00000A   14           DEC     A
+   \   00000B   601F         JZ      ??IOT_WiFiInit_1
+   \   00000D   14           DEC     A
+   \   00000E   6036         JZ      ??IOT_WiFiInit_2
+   \   000010   8051         SJMP    ??IOT_WiFiInit_3
+    108            {
+    109              case 0:
+    110                HalUARTWrite(1,"AT\r\n",osal_strlen("AT\r\n"));//配置发AT命令
+   \                     ??IOT_WiFiInit_0:
+   \   000012                ; Setup parameters for call to function HalUARTWrite
+   \   000012                ; Setup parameters for call to function osal_strlen
+   \   000012   7A..         MOV     R2,#`?<Constant "AT\\r\\n">` & 0xff
+   \   000014   7B..         MOV     R3,#(`?<Constant "AT\\r\\n">` >> 8) & 0xff
+   \   000016   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_17:
+   \   000019   7A..         MOV     R2,#`?<Constant "AT\\r\\n">` & 0xff
+   \   00001B   7B..         MOV     R3,#(`?<Constant "AT\\r\\n">` >> 8) & 0xff
+   \   00001D   7901         MOV     R1,#0x1
+   \   00001F   12....       LCALL   ??HalUARTWrite?relay
+    111                HalUARTWrite(0,"\r\n**CSGSM Connect To MODULE...\r\n",32); //串口提示正在连接模块
+   \   000022                ; Setup parameters for call to function HalUARTWrite
+   \   000022   7C20         MOV     R4,#0x20
+   \   000024   7D00         MOV     R5,#0x0
+   \   000026   7A..         MOV     R2,#`?<Constant "\\r\\n**CSGSM Connect To ...">` & 0xff
+   \   000028   7B..         MOV     R3,#(`?<Constant "\\r\\n**CSGSM Connect To ...">` >> 8) & 0xff
+   \   00002A   8032         SJMP    ??IOT_WiFiInit_4
+    112              break;
+    113               case 1:
+    114                HalUARTWrite(1,"AT+CWMODE=3\r\n",osal_strlen("AT+CWMODE=3\r\n"));//设置模式
+   \                     ??IOT_WiFiInit_1:
+   \   00002C                ; Setup parameters for call to function HalUARTWrite
+   \   00002C                ; Setup parameters for call to function osal_strlen
+   \   00002C   7A..         MOV     R2,#`?<Constant "AT+CWMODE=3\\r\\n">` & 0xff
+   \   00002E   7B..         MOV     R3,#(`?<Constant "AT+CWMODE=3\\r\\n">` >> 8) & 0xff
+   \   000030   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_18:
+   \   000033   7A..         MOV     R2,#`?<Constant "AT+CWMODE=3\\r\\n">` & 0xff
+   \   000035   7B..         MOV     R3,#(`?<Constant "AT+CWMODE=3\\r\\n">` >> 8) & 0xff
+   \   000037   7901         MOV     R1,#0x1
+   \   000039   12....       LCALL   ??HalUARTWrite?relay
+    115                HalUARTWrite(0,"Set WiFi ModuleAP+STA..\r\n",25);
+   \   00003C                ; Setup parameters for call to function HalUARTWrite
+   \   00003C   7C19         MOV     R4,#0x19
+   \   00003E   7D00         MOV     R5,#0x0
+   \   000040   7A..         MOV     R2,#`?<Constant "Set WiFi ModuleAP+STA...">` & 0xff
+   \   000042   7B..         MOV     R3,#(`?<Constant "Set WiFi ModuleAP+STA...">` >> 8) & 0xff
+   \   000044   8018         SJMP    ??IOT_WiFiInit_4
+    116              break;
+    117                case 2:
+    118                HalUARTWrite(1,"AT+CIPMODE=1\r\n",osal_strlen("AT+CIPMODE=1\r\n"));//配置发AT命令 设置透传模式CS
+   \                     ??IOT_WiFiInit_2:
+   \   000046                ; Setup parameters for call to function HalUARTWrite
+   \   000046                ; Setup parameters for call to function osal_strlen
+   \   000046   7A..         MOV     R2,#`?<Constant "AT+CIPMODE=1\\r\\n">` & 0xff
+   \   000048   7B..         MOV     R3,#(`?<Constant "AT+CIPMODE=1\\r\\n">` >> 8) & 0xff
+   \   00004A   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_19:
+   \   00004D   7A..         MOV     R2,#`?<Constant "AT+CIPMODE=1\\r\\n">` & 0xff
+   \   00004F   7B..         MOV     R3,#(`?<Constant "AT+CIPMODE=1\\r\\n">` >> 8) & 0xff
+   \   000051   7901         MOV     R1,#0x1
+   \   000053   12....       LCALL   ??HalUARTWrite?relay
+    119                HalUARTWrite(0,"Set WiFi Module transparent\r\n",29); //串口提示正在连接模块
+   \   000056                ; Setup parameters for call to function HalUARTWrite
+   \   000056   7C1D         MOV     R4,#0x1d
+   \   000058   7D00         MOV     R5,#0x0
+   \   00005A   7A..         MOV     R2,#`?<Constant "Set WiFi Module trans...">` & 0xff
+   \   00005C   7B..         MOV     R3,#(`?<Constant "Set WiFi Module trans...">` >> 8) & 0xff
+   \                     ??IOT_WiFiInit_4:
+   \   00005E   7900         MOV     R1,#0x0
+   \   000060   12....       LCALL   ??HalUARTWrite?relay
+    120              break;
+    121            }
+    122          }
+   \                     ??IOT_WiFiInit_3:
+   \   000063   02....       LJMP    ??Subroutine8_0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   12....       LCALL   ??osal_strlen?relay
+   \   000003   EA           MOV     A,R2
+   \   000004   FC           MOV     R4,A
+   \   000005   EB           MOV     A,R3
+   \   000006   FD           MOV     R5,A
+   \   000007   22           RET
+    123          
+    124          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    125          void IotConntect(void)//初始化MQTT
+   \                     IotConntect:
+    126          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 200
+   \   000005   7438         MOV     A,#0x38
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    127            unsigned char SendATData[200];
+    128              
+    129            switch(WiFiStatus.Status)
+   \   00000A   90....       MOV     DPTR,#WiFiStatus
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   24FD         ADD     A,#-0x3
+   \   000010   6009         JZ      ??IotConntect_0
+   \   000012   14           DEC     A
+   \   000013   606D         JZ      ??IotConntect_1
+   \   000015   14           DEC     A
+   \   000016   6074         JZ      ??IotConntect_2
+   \   000018   02....       LJMP    ??IotConntect_3 & 0xFFFF
+    130            {
+    131               case 3:
+    132                memset(SendATData,0,200);
+   \                     ??IotConntect_0:
+   \   00001B                ; Setup parameters for call to function memset
+   \   00001B   75..C8       MOV     ?V0 + 0,#-0x38
+   \   00001E   75..00       MOV     ?V0 + 1,#0x0
+   \   000021   78..         MOV     R0,#?V0 + 0
+   \   000023   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000026   7C00         MOV     R4,#0x0
+   \   000028   7D00         MOV     R5,#0x0
+   \   00002A   7402         MOV     A,#0x2
+   \   00002C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00002F   AA82         MOV     R2,DPL
+   \   000031   AB83         MOV     R3,DPH
+   \   000033   12....       LCALL   ??memset?relay
+   \   000036   7402         MOV     A,#0x2
+   \   000038   12....       LCALL   ?DEALLOC_XSTACK8
+    133                sprintf((char *)SendATData,"AT+CWJAP=\"%s\",\"%s\"\r\n",LYSSID,LYPASSWD);//链接到路由器
+   \   00003B                ; Setup parameters for call to function sprintf
+   \   00003B   75....       MOV     ?V0 + 0,#`?<Constant "2233445566">` & 0xff
+   \   00003E   75....       MOV     ?V0 + 1,#(`?<Constant "2233445566">` >> 8) & 0xff
+   \   000041   78..         MOV     R0,#?V0 + 0
+   \   000043   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000046   75....       MOV     ?V0 + 0,#`?<Constant "YanWei">` & 0xff
+   \   000049   75....       MOV     ?V0 + 1,#(`?<Constant "YanWei">` >> 8) & 0xff
+   \   00004C   78..         MOV     R0,#?V0 + 0
+   \   00004E   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000051   7C..         MOV     R4,#`?<Constant "AT+CWJAP=\\"%s\\",\\"%s\\"\\r\\n">` & 0xff
+   \   000053   7D..         MOV     R5,#(`?<Constant "AT+CWJAP=\\"%s\\",\\"%s\\"\\r\\n">` >> 8) & 0xff
+   \   000055   7404         MOV     A,#0x4
+   \   000057   12....       LCALL   ?XSTACK_DISP0_8
+   \   00005A   AA82         MOV     R2,DPL
+   \   00005C   AB83         MOV     R3,DPH
+   \   00005E   12....       LCALL   ??sprintf?relay
+   \   000061   7404         MOV     A,#0x4
+   \   000063   12....       LCALL   ?DEALLOC_XSTACK8
+    134                HalUARTWrite(1,SendATData,osal_strlen((char *)SendATData));
+   \   000066                ; Setup parameters for call to function HalUARTWrite
+   \   000066                ; Setup parameters for call to function osal_strlen
+   \   000066   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   000069   7901         MOV     R1,#0x1
+   \   00006B   12....       LCALL   ??HalUARTWrite?relay
+    135                HalUARTWrite(0,SendATData,osal_strlen((char *)SendATData));
+   \   00006E                ; Setup parameters for call to function HalUARTWrite
+   \   00006E                ; Setup parameters for call to function osal_strlen
+   \   00006E   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   000071   7900         MOV     R1,#0x0
+   \   000073   12....       LCALL   ??HalUARTWrite?relay
+    136                HalUARTWrite(0,"Connect To WiFi Route...\r\n",26);
+   \   000076                ; Setup parameters for call to function HalUARTWrite
+   \   000076   7C1A         MOV     R4,#0x1a
+   \   000078   7D00         MOV     R5,#0x0
+   \   00007A   7A..         MOV     R2,#`?<Constant "Connect To WiFi Route...">` & 0xff
+   \   00007C   7B..         MOV     R3,#(`?<Constant "Connect To WiFi Route...">` >> 8) & 0xff
+   \   00007E   7900         MOV     R1,#0x0
+   \   000080   8040         SJMP    ??IotConntect_4
+    137                break;
+    138              case 4:
+    139                HalUARTWrite(1,"AT+CIPSTART=\"TCP\",\"183.230.40.33\",80\r\n",sizeof("AT+CIPSTART=\"TCP\",\"183.230.40.33\",80\r\n"));//设置登录到MQTT服务器
+   \                     ??IotConntect_1:
+   \   000082                ; Setup parameters for call to function HalUARTWrite
+   \   000082   7C27         MOV     R4,#0x27
+   \   000084   7D00         MOV     R5,#0x0
+   \   000086   7A..         MOV     R2,#`?<Constant "AT+CIPSTART=\\"TCP\\",\\"18...">` & 0xff
+   \   000088   7B..         MOV     R3,#(`?<Constant "AT+CIPSTART=\\"TCP\\",\\"18...">` >> 8) & 0xff
+   \   00008A   8034         SJMP    ??CrossCallReturnLabel_2
+    140                break;
+    141              case 5:
+    142                memset(SendATData,0,200);
+   \                     ??IotConntect_2:
+   \   00008C                ; Setup parameters for call to function memset
+   \   00008C   75..C8       MOV     ?V0 + 0,#-0x38
+   \   00008F   75..00       MOV     ?V0 + 1,#0x0
+   \   000092   78..         MOV     R0,#?V0 + 0
+   \   000094   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000097   7C00         MOV     R4,#0x0
+   \   000099   7D00         MOV     R5,#0x0
+   \   00009B   7402         MOV     A,#0x2
+   \   00009D   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000A0   AA82         MOV     R2,DPL
+   \   0000A2   AB83         MOV     R3,DPH
+   \   0000A4   12....       LCALL   ??memset?relay
+   \   0000A7   7402         MOV     A,#0x2
+   \   0000A9   12....       LCALL   ?DEALLOC_XSTACK8
+    143                sprintf((char *)SendATData,"AT+CIPSEND\r\n");
+   \   0000AC                ; Setup parameters for call to function sprintf
+   \   0000AC   7C..         MOV     R4,#`?<Constant "AT+CIPSEND\\r\\n">` & 0xff
+   \   0000AE   7D..         MOV     R5,#(`?<Constant "AT+CIPSEND\\r\\n">` >> 8) & 0xff
+   \   0000B0   85..82       MOV     DPL,?XSP + 0
+   \   0000B3   85..83       MOV     DPH,?XSP + 1
+   \   0000B6   AA82         MOV     R2,DPL
+   \   0000B8   AB83         MOV     R3,DPH
+   \   0000BA   12....       LCALL   ??sprintf?relay
+    144                HalUARTWrite(1,SendATData,osal_strlen((char *)SendATData));//设置登录
+   \   0000BD                ; Setup parameters for call to function HalUARTWrite
+   \   0000BD                ; Setup parameters for call to function osal_strlen
+   \   0000BD   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   0000C0   7901         MOV     R1,#0x1
+   \                     ??IotConntect_4:
+   \   0000C2   12....       LCALL   ??HalUARTWrite?relay
+    145                break;  
+    146            }
+    147          }
+   \                     ??IotConntect_3:
+   \   0000C5   74C8         MOV     A,#-0x38
+   \   0000C7   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000CA   02....       LJMP    ?Subroutine1 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   85..82       MOV     DPL,?XSP + 0
+   \   000003   85..83       MOV     DPH,?XSP + 1
+   \   000006   AA82         MOV     R2,DPL
+   \   000008   AB83         MOV     R3,DPH
+   \   00000A   12....       LCALL   ??osal_strlen?relay
+   \   00000D   EA           MOV     A,R2
+   \   00000E   FC           MOV     R4,A
+   \   00000F   EB           MOV     A,R3
+   \   000010   FD           MOV     R5,A
+   \   000011   85..82       MOV     DPL,?XSP + 0
+   \   000014   85..83       MOV     DPH,?XSP + 1
+   \   000017   AA82         MOV     R2,DPL
+   \   000019   AB83         MOV     R3,DPH
+   \   00001B   22           RET
+    148          
+    149          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    150          void IOT_RecdataPut(void)//对IOT返回的数据内容进行解析
+   \                     IOT_RecdataPut:
+    151          { 
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    152            char *strx;
+    153           switch(WiFiStatus.Status)
+   \   000005   90....       MOV     DPTR,#WiFiStatus
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   6011         JZ      ??IOT_RecdataPut_0
+   \   00000B   14           DEC     A
+   \   00000C   601E         JZ      ??IOT_RecdataPut_1
+   \   00000E   14           DEC     A
+   \   00000F   602B         JZ      ??IOT_RecdataPut_2
+   \   000011   14           DEC     A
+   \   000012   6038         JZ      ??IOT_RecdataPut_3
+   \   000014   14           DEC     A
+   \   000015   6045         JZ      ??IOT_RecdataPut_4
+   \   000017   14           DEC     A
+   \   000018   6052         JZ      ??IOT_RecdataPut_5
+   \   00001A   8065         SJMP    ??IOT_RecdataPut_6
+    154            {
+    155              case 0:
+    156                strx=strstr((const char*)uartbuf2,(const char*)"OK");//返回OK，表明通讯正常c s t x
+    157                 if(strx)
+   \                     ??IOT_RecdataPut_0:
+   \   00001C                ; Setup parameters for call to function strstr
+   \   00001C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   00001F   6060         JZ      ??IOT_RecdataPut_6
+    158                 {
+    159                   LCD_P8x16Str(0, 4, "CONNET MODULE OK");
+   \   000021                ; Setup parameters for call to function LCD_P8x16Str
+   \   000021   7C..         MOV     R4,#`?<Constant "CONNET MODULE OK">` & 0xff
+   \   000023   7D..         MOV     R5,#(`?<Constant "CONNET MODULE OK">` >> 8) & 0xff
+   \   000025   12....       LCALL   ?Subroutine4 & 0xFFFF
+    160                   WiFiStatus.Status=1;
+    161                 }
+   \                     ??CrossCallReturnLabel_9:
+   \   000028   7401         MOV     A,#0x1
+   \   00002A   8054         SJMP    ??IOT_RecdataPut_7
+    162                break;
+    163                
+    164                case 1:
+    165                strx=strstr((const char*)uartbuf2,(const char*)"OK");//设置下模式3
+    166                 if(strx)
+   \                     ??IOT_RecdataPut_1:
+   \   00002C                ; Setup parameters for call to function strstr
+   \   00002C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   00002F   6050         JZ      ??IOT_RecdataPut_6
+    167                 {
+    168                   LCD_P8x16Str(0, 4, "SET MODE 3  [OK]");
+   \   000031                ; Setup parameters for call to function LCD_P8x16Str
+   \   000031   7C..         MOV     R4,#`?<Constant "SET MODE 3  [OK]">` & 0xff
+   \   000033   7D..         MOV     R5,#(`?<Constant "SET MODE 3  [OK]">` >> 8) & 0xff
+   \   000035   12....       LCALL   ?Subroutine4 & 0xFFFF
+    169                   WiFiStatus.Status=2;
+    170                 }
+   \                     ??CrossCallReturnLabel_10:
+   \   000038   7402         MOV     A,#0x2
+   \   00003A   8044         SJMP    ??IOT_RecdataPut_7
+    171                 break;
+    172                   
+    173                case 2:
+    174                strx=strstr((const char*)uartbuf2,(const char*)"OK");//设置模块为 透传模式 发送json到oennet
+    175                 if(strx)
+   \                     ??IOT_RecdataPut_2:
+   \   00003C                ; Setup parameters for call to function strstr
+   \   00003C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   00003F   6040         JZ      ??IOT_RecdataPut_6
+    176                 {
+    177                   LCD_P8x16Str(0, 4, "TRANSPARNET [OK]");
+   \   000041                ; Setup parameters for call to function LCD_P8x16Str
+   \   000041   7C..         MOV     R4,#`?<Constant "TRANSPARNET [OK]">` & 0xff
+   \   000043   7D..         MOV     R5,#(`?<Constant "TRANSPARNET [OK]">` >> 8) & 0xff
+   \   000045   12....       LCALL   ?Subroutine4 & 0xFFFF
+    178                   WiFiStatus.Status=3;
+    179                 } 
+   \                     ??CrossCallReturnLabel_11:
+   \   000048   7403         MOV     A,#0x3
+   \   00004A   8034         SJMP    ??IOT_RecdataPut_7
+    180                break;  
+    181              
+    182                 case 3://判断登录服务器情况
+    183                  strx=strstr((const char*)uartbuf2,(const char*)"OK");//CSTX链接到路由器反馈，要上外网必须让WiFi去链接到路由器
+    184                 if(strx)
+   \                     ??IOT_RecdataPut_3:
+   \   00004C                ; Setup parameters for call to function strstr
+   \   00004C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   00004F   6030         JZ      ??IOT_RecdataPut_6
+    185                 {
+    186                   LCD_P8x16Str(0, 4, "CONNECT Route OK");
+   \   000051                ; Setup parameters for call to function LCD_P8x16Str
+   \   000051   7C..         MOV     R4,#`?<Constant "CONNECT Route OK">` & 0xff
+   \   000053   7D..         MOV     R5,#(`?<Constant "CONNECT Route OK">` >> 8) & 0xff
+   \   000055   12....       LCALL   ?Subroutine4 & 0xFFFF
+    187                   WiFiStatus.Status=4;//此时需要发布登录
+    188                 } 
+   \                     ??CrossCallReturnLabel_12:
+   \   000058   7404         MOV     A,#0x4
+   \   00005A   8024         SJMP    ??IOT_RecdataPut_7
+    189                break;   
+    190              
+    191                 case 4://查看登录情况返回
+    192                 strx=strstr((const char*)uartbuf2,(const char*)"OK");//ONENET登录成功，可以发布订阅数据了
+    193                 if(strx)
+   \                     ??IOT_RecdataPut_4:
+   \   00005C                ; Setup parameters for call to function strstr
+   \   00005C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   00005F   6020         JZ      ??IOT_RecdataPut_6
+    194                 {
+    195                    LCD_P8x16Str(0, 4, "CONNECT CLOUD OK");
+   \   000061                ; Setup parameters for call to function LCD_P8x16Str
+   \   000061   7C..         MOV     R4,#`?<Constant "CONNECT CLOUD OK">` & 0xff
+   \   000063   7D..         MOV     R5,#(`?<Constant "CONNECT CLOUD OK">` >> 8) & 0xff
+   \   000065   12....       LCALL   ?Subroutine4 & 0xFFFF
+    196                    WiFiStatus.Status=5;//此时就可以发数据了
+    197                 } 
+   \                     ??CrossCallReturnLabel_13:
+   \   000068   7405         MOV     A,#0x5
+   \   00006A   8014         SJMP    ??IOT_RecdataPut_7
+    198                break;
+    199              
+    200               case 5://查看发布数据情况
+    201               strx=strstr((const char*)uartbuf2,(const char*)"OK");//发布数据成功c s t x
+    202               if(strx)
+   \                     ??IOT_RecdataPut_5:
+   \   00006C                ; Setup parameters for call to function strstr
+   \   00006C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   00006F   6006         JZ      ??IOT_RecdataPut_8
+    203               {
+    204                  LCD_P8x16Str(0, 4, "SEND CLOUD DATA.");
+   \   000071                ; Setup parameters for call to function LCD_P8x16Str
+   \   000071   7C..         MOV     R4,#`?<Constant "SEND CLOUD DATA.">` & 0xff
+   \   000073   7D..         MOV     R5,#(`?<Constant "SEND CLOUD DATA.">` >> 8) & 0xff
+   \   000075   8004         SJMP    ??IOT_RecdataPut_9
+    205                  WiFiStatus.Status=6;//此时就可以发数据了
+    206               }
+    207               else
+    208               {
+    209                  LCD_P8x16Str(0, 4, "SEND CLOUD DATA*");
+   \                     ??IOT_RecdataPut_8:
+   \   000077                ; Setup parameters for call to function LCD_P8x16Str
+   \   000077   7C..         MOV     R4,#`?<Constant "SEND CLOUD DATA*">` & 0xff
+   \   000079   7D..         MOV     R5,#(`?<Constant "SEND CLOUD DATA*">` >> 8) & 0xff
+    210                  WiFiStatus.Status=6;//此时就可以发数据了
+    211               }
+    212              break;
+    213            }   
+   \                     ??IOT_RecdataPut_9:
+   \   00007B   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_14:
+   \   00007E   7406         MOV     A,#0x6
+   \                     ??IOT_RecdataPut_7:
+   \   000080   F0           MOVX    @DPTR,A
+    214          }
+   \                     ??IOT_RecdataPut_6:
+   \   000081   02....       LJMP    ?Subroutine1 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   7A04         MOV     R2,#0x4
+   \   000002   7900         MOV     R1,#0x0
+   \   000004   12....       LCALL   ??LCD_P8x16Str?relay
+   \   000007   90....       MOV     DPTR,#WiFiStatus
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   000002   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   000004   7A..         MOV     R2,#uartbuf2 & 0xff
+   \   000006   7B..         MOV     R3,#(uartbuf2 >> 8) & 0xff
+   \   000008   12....       LCALL   ??strstr?relay
+   \   00000B   8B..         MOV     ?V0 + 1,R3
+   \   00000D   EA           MOV     A,R2
+   \   00000E   45..         ORL     A,?V0 + 1
+   \   000010   22           RET
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??UartInitPort0?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    UartInitPort0
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??rxCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    rxCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??UartInitPort1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    UartInitPort1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialCallBack?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialCallBack
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??IOT_WiFiInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    IOT_WiFiInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??IotConntect?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    IotConntect
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??IOT_RecdataPut?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    IOT_RecdataPut
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {0}>`:
+   \   000000   00           DB 0
+   \   000001   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000009   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000011   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000019   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000021   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000029   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000031   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000039   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000041   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000049   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000051   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000059   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000061   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000069   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000071   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000079   00000000     DB 0, 0, 0, 0, 0, 0, 0
+   \            000000  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT\\r\\n">`:
+   \   000000   41540D0A     DB "AT\015\012"
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\r\\n**CSGSM Connect To ...">`:
+   \   000000   0D0A2A2A     DB "\015\012**CSGSM Connect To MODULE...\015\012"
+   \            43534753
+   \            4D20436F
+   \            6E6E6563
+   \            7420546F
+   \            204D4F44
+   \            554C452E
+   \            2E2E0D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CWMODE=3\\r\\n">`:
+   \   000000   41542B43     DB "AT+CWMODE=3\015\012"
+   \            574D4F44
+   \            453D330D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Set WiFi ModuleAP+STA...">`:
+   \   000000   53657420     DB "Set WiFi ModuleAP+STA..\015\012"
+   \            57694669
+   \            204D6F64
+   \            756C6541
+   \            502B5354
+   \            412E2E0D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CIPMODE=1\\r\\n">`:
+   \   000000   41542B43     DB "AT+CIPMODE=1\015\012"
+   \            49504D4F
+   \            44453D31
+   \            0D0A00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Set WiFi Module trans...">`:
+   \   000000   53657420     DB "Set WiFi Module transparent\015\012"
+   \            57694669
+   \            204D6F64
+   \            756C6520
+   \            7472616E
+   \            73706172
+   \            656E740D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CWJAP=\\"%s\\",\\"%s\\"\\r\\n">`:
+   \   000000   41542B43     DB "AT+CWJAP=\"%s\",\"%s\"\015\012"
+   \            574A4150
+   \            3D222573
+   \            222C2225
+   \            73220D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "YanWei">`:
+   \   000000   59616E57     DB "YanWei"
+   \            656900  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "2233445566">`:
+   \   000000   32323333     DB "2233445566"
+   \            34343535
+   \            363600  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Connect To WiFi Route...">`:
+   \   000000   436F6E6E     DB "Connect To WiFi Route...\015\012"
+   \            65637420
+   \            546F2057
+   \            69466920
+   \            526F7574
+   \            652E2E2E
+   \            0D0A00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CIPSTART=\\"TCP\\",\\"18...">`:
+   \   000000   41542B43     DB "AT+CIPSTART=\"TCP\",\"183.230.40.33\",80\015\012"
+   \            49505354
+   \            4152543D
+   \            22544350
+   \            222C2231
+   \            38332E32
+   \            33302E34
+   \            302E3333
+   \            222C3830
+   \            0D0A00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CIPSEND\\r\\n">`:
+   \   000000   41542B43     DB "AT+CIPSEND\015\012"
+   \            49505345
+   \            4E440D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "OK">`:
+   \   000000   4F4B00       DB "OK"
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "CONNET MODULE OK">`:
+   \   000000   434F4E4E     DB "CONNET MODULE OK"
+   \            4554204D
+   \            4F44554C
+   \            45204F4B
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "SET MODE 3  [OK]">`:
+   \   000000   53455420     DB "SET MODE 3  [OK]"
+   \            4D4F4445
+   \            20332020
+   \            5B4F4B5D
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "TRANSPARNET [OK]">`:
+   \   000000   5452414E     DB "TRANSPARNET [OK]"
+   \            53504152
+   \            4E455420
+   \            5B4F4B5D
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "CONNECT Route OK">`:
+   \   000000   434F4E4E     DB "CONNECT Route OK"
+   \            45435420
+   \            526F7574
+   \            65204F4B
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "CONNECT CLOUD OK">`:
+   \   000000   434F4E4E     DB "CONNECT CLOUD OK"
+   \            45435420
+   \            434C4F55
+   \            44204F4B
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "SEND CLOUD DATA.">`:
+   \   000000   53454E44     DB "SEND CLOUD DATA."
+   \            20434C4F
+   \            55442044
+   \            4154412E
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "SEND CLOUD DATA*">`:
+   \   000000   53454E44     DB "SEND CLOUD DATA*"
+   \            20434C4F
+   \            55442044
+   \            4154412A
+   \            00      
+
+   Maximum stack usage in bytes:
+
+     Function               ISTACK PSTACK XSTACK
+     --------               ------ ------ ------
+     IOT_RecdataPut             0      0     20
+       -> strstr                0      0     20
+       -> LCD_P8x16Str          0      0     20
+       -> strstr                0      0     20
+       -> LCD_P8x16Str          0      0     20
+       -> strstr                0      0     20
+       -> LCD_P8x16Str          0      0     20
+       -> strstr                0      0     20
+       -> LCD_P8x16Str          0      0     20
+       -> strstr                0      0     20
+       -> LCD_P8x16Str          0      0     20
+       -> strstr                0      0     20
+       -> LCD_P8x16Str          0      0     20
+       -> LCD_P8x16Str          0      0     20
+     IOT_WiFiInit               2      0      0
+       -> osal_strlen           4      0      0
+       -> HalUARTWrite          4      0      0
+       -> HalUARTWrite          4      0      0
+       -> osal_strlen           4      0      0
+       -> HalUARTWrite          4      0      0
+       -> HalUARTWrite          4      0      0
+       -> osal_strlen           4      0      0
+       -> HalUARTWrite          4      0      0
+       -> HalUARTWrite          4      0      0
+     IotConntect                0      0    214
+       -> memset                0      0    424
+       -> sprintf               0      0    428
+       -> osal_strlen           0      0    420
+       -> HalUARTWrite          0      0    420
+       -> osal_strlen           0      0    420
+       -> HalUARTWrite          0      0    420
+       -> HalUARTWrite          0      0    420
+       -> HalUARTWrite          0      0    420
+       -> memset                0      0    424
+       -> sprintf               0      0    420
+       -> osal_strlen           0      0    420
+       -> HalUARTWrite          0      0    420
+     SerialCallBack             0      0     10
+       -> HalUARTRead           0      0     20
+       -> Hal_UART_RxBufLen     0      0     20
+       -> IOT_RecdataPut        0      0     20
+       -> HalUARTWrite          0      0     20
+     UartInitPort0              2      0     29
+       -> HalUARTOpen           4      0     58
+     UartInitPort1              2      0     29
+       -> HalUARTOpen           4      0     58
+     rxCB                       2      0    142
+       -> HalUARTRead           0      0    278
+       -> Hal_UART_RxBufLen     0      0    278
+       -> strlen                0      0    278
+       -> strlen                0      0    284
+       -> osal_memcpy           0      0    284
+
+
+   Segment part sizes:
+
+     Function/Label                            Bytes
+     --------------                            -----
+     uartbuf2                                   200
+     uchBuf                                      10
+     WiFiStatus                                  23
+     UartInitPort0                               47
+     ?Subroutine0                                 8
+     ??Subroutine8_0                              7
+     ?Subroutine5                                12
+     rxCB                                       150
+     ?Subroutine7                                 9
+     UartInitPort1                               48
+     SerialCallBack                              68
+     ?Subroutine1                                 5
+     IOT_WiFiInit                               102
+     ?Subroutine6                                 8
+     IotConntect                                205
+     ?Subroutine2                                28
+     IOT_RecdataPut                             132
+     ?Subroutine4                                11
+     ?Subroutine3                                17
+     ??UartInitPort0?relay                        6
+     ??rxCB?relay                                 6
+     ??UartInitPort1?relay                        6
+     ??SerialCallBack?relay                       6
+     ??IOT_WiFiInit?relay                         6
+     ??IotConntect?relay                          6
+     ??IOT_RecdataPut?relay                       6
+     ?<Constant {0}>                            128
+     ?<Constant "AT\r\n">                         5
+     ?<Constant "\r\n**CSGSM Connect To ...">    33
+     ?<Constant "AT+CWMODE=3\r\n">               14
+     ?<Constant "Set WiFi ModuleAP+STA...">      26
+     ?<Constant "AT+CIPMODE=1\r\n">              15
+     ?<Constant "Set WiFi Module trans...">      30
+     ?<Constant "AT+CWJAP=\"%s\",\"%s\"\r\n">    21
+     ?<Constant "YanWei">                         7
+     ?<Constant "2233445566">                    11
+     ?<Constant "Connect To WiFi Route...">      27
+     ?<Constant "AT+CIPSTART=\"TCP\",\"18...">   39
+     ?<Constant "AT+CIPSEND\r\n">                13
+     ?<Constant "OK">                             3
+     ?<Constant "CONNET MODULE OK">              17
+     ?<Constant "SET MODE 3  [OK]">              17
+     ?<Constant "TRANSPARNET [OK]">              17
+     ?<Constant "CONNECT Route OK">              17
+     ?<Constant "CONNECT CLOUD OK">              17
+     ?<Constant "SEND CLOUD DATA.">              17
+     ?<Constant "SEND CLOUD DATA*">              17
+
+ 
+ 857 bytes in segment BANKED_CODE
+  42 bytes in segment BANK_RELAYS
+ 491 bytes in segment XDATA_ROM_C
+ 233 bytes in segment XDATA_Z
+ 
+ 899 bytes of CODE  memory
+ 491 bytes of CONST memory
+ 233 bytes of XDATA memory
+
+Errors: none
+Warnings: none

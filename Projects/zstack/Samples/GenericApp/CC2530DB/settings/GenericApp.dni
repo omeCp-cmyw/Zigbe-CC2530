@@ -1,0 +1,47 @@
+[DebugChecksum]
+Checksum=1765136576
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\coordinator.c}.170.1@1" 0 0 0 0 "" 0 ""
+Count=1
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Aliases]
+A0=_ "D:\test_nb\代码\多终端\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A1=_ "D:\客户文件区\小森天乐\ZStack-CC2530-2.5.1a\Components\osal\common\OSAL_Timers.c" ""
+A2=_ "D:\客户文件区\小森天乐\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A3=_ "E:\4G开发板好的代码\4G网关一对三ADC采集版本\CS4GEC600SZStack-CC2530-2.5.1a\Components\zmac\f8w\zmac.c" ""
+A4=_ "E:\4G开发板好的代码\4G网关一对三ADC采集版本\CS4GEC600SZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A5=_ "E:\cc2530模块资料-2014-5-1\3.无线通信实验\26，PC程序显示两节点温度和光强--根据值--自动或手动控制各节点\ZStack-CC2530-2.5.1a\Components\osal\mcu\cc2530\OSAL_Math.s51" ""
+A6=_ "E:\cc2530模块资料-2014-5-1\3.无线通信实验\26，PC程序显示两节点温度和光强--根据值--自动或手动控制各节点\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A7=_ "F:\2015NewPaper\60ZigBee透传_Temp\Zigbee code\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A8=_ "F:\ZIGBEE网关开发板设计资料\Zigbee code\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp_NBIOT_MQTT发温湿度到ONENET平台显示 - 副本\Source\BC26.c" ""
+A9=_ "G:\软件开发\CS4GZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a初步稳定版本需要修改警告和名字\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A10=_ "G:\软件开发\ZStack-CC2530-2.5.1a原版BC26\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A11=_ "G:\软件开发\毕设篇\4.多终端采集多路数据通过WIFI发送到ONENET云端物联网\Projects\zstack\ZMain\TI2530DB\ZMain.c" "D:\test_nb\代码\多终端\Projects\zstack\ZMain\TI2530DB\ZMain.c"
+Count=12
+SuppressDialog=1

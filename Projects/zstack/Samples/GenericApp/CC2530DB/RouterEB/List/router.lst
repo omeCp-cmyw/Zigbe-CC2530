@@ -1,0 +1,711 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         24/Oct/2021  14:39:37 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\Source\router.c                            #
+#    Command line       =  -f D:\test_nb\代码\多终端\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wRou #
+#                          ter.cfg (-DCPU32MHZ -DROOT=__near_func             #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig #
+#                          .cfg (-DZIGBEEPRO -DSECURE=0                       #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\test_nb\代码\多终端\Proj #
+#                          ects\zstack\Samples\GenericApp\Source\router.c -D  #
+#                          ZTOOL_P1 -D LCD_SUPPORTED=DEBUG -lC                #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\RouterEB\List\ -lA                #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\RouterEB\List\ --diag_suppress    #
+#                          Pe001,Pa010 -o D:\test_nb\代码\多终端\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\RouterEB\Obj\ -e   #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\test_nb\代码\多终端\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\ -I D:\test_nb\代码\多终端\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\..\Source #
+#                          \ -I D:\test_nb\代码\多终端\Projects\zstack\Sample #
+#                          s\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I  #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\hal\inc #
+#                          lude\ -I D:\test_nb\代码\多终端\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\hal\target\CC2530EB\ -I                          #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\mac\inc #
+#                          lude\ -I D:\test_nb\代码\多终端\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\mac\high_level\ -I D:\test_nb\代码\多终端\Projec #
+#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
+#                          ..\Components\mac\low_level\srf04\ -I              #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\mac\low #
+#                          _level\srf04\single_chip\ -I                       #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\mt\ -I  #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\osal\in #
+#                          clude\ -I D:\test_nb\代码\多终端\Projects\zstack\S #
+#                          amples\GenericApp\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\saddr\ -I D:\test_nb\代码\多终端\Proje #
+#                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\stack\a #
+#                          f\ -I D:\test_nb\代码\多终端\Projects\zstack\Sampl #
+#                          es\GenericApp\CC2530DB\..\..\..\..\..\Components\s #
+#                          tack\nwk\ -I D:\test_nb\代码\多终端\Projects\zstac #
+#                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sapi\ -I D:\test_nb\代码\多终端\Projec #
+#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
+#                          ..\Components\stack\sec\ -I                        #
+#                          D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\stack\s #
+#                          ys\ -I D:\test_nb\代码\多终端\Projects\zstack\Samp #
+#                          les\GenericApp\CC2530DB\..\..\..\..\..\Components\ #
+#                          stack\zdo\ -I D:\test_nb\代码\多终端\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\Comp #
+#                          onents\zmac\ -I D:\test_nb\代码\多终端\Projects\zs #
+#                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\zmac\f8w\ -Ohz --require_prototypes       #
+#    List file          =  D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\RouterEB\List\router.lst          #
+#    Object file        =  D:\test_nb\代码\多终端\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\RouterEB\Obj\router.r51           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\test_nb\代码\多终端\Projects\zstack\Samples\GenericApp\Source\router.c
+      1          /******************************************************************************
+      2            Filename:       GenericApp.c
+      3            Revised:        $Date: 2012-03-07 01:04:58 -0800 (Wed, 07 Mar 2012) $
+      4            Revision:       $Revision: 29656 $
+      5          
+      6            Description:    Generic Application (no Profile).
+      7          
+      8          
+      9            Copyright 2004-2012 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License"). You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product. Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED 揂S IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          ******************************************************************************/
+     39          
+     40          /*********************************************************************
+     41            This application isn't intended to do anything useful, it is
+     42            intended to be a simple example of an application's structure.
+     43          
+     44            This application sends "Hello World" to another "Generic"
+     45            application every 5 seconds.  The application will also
+     46            receives "Hello World" packets.
+     47          
+     48            The "Hello World" messages are sent/received as MSG type message.
+     49          
+     50            This applications doesn't have a profile, so it handles everything
+     51            directly - itself.
+     52          
+     53            Key control:
+     54              SW1:
+     55              SW2:  initiates end device binding
+     56              SW3:
+     57              SW4:  initiates a match description request
+     58          *********************************************************************/
+     59          
+     60          /*********************************************************************
+     61           * INCLUDES
+     62           */
+     63          #include "OSAL.h"
+     64          #include "AF.h"
+     65          #include "ZDApp.h"
+     66          #include "ZDObject.h"
+     67          #include "ZDProfile.h"
+     68          
+     69          #include "GenericApp.h"
+     70          #include "DebugTrace.h"
+     71          
+     72          #if !defined( WIN32 )
+     73            #include "OnBoard.h"
+     74          #endif
+     75          
+     76          /* HAL */
+     77          #include "hal_lcd.h"
+     78          #include "hal_led.h"
+     79          #include "hal_key.h"
+     80          #include "hal_uart.h"
+     81          #include "dht11.h"
+     82          
+     83          /* RTOS */
+     84          #if defined( IAR_ARMCM3_LM )
+     85          #include "RTOS_App.h"
+     86          #endif  
+     87          #define LED1 P1_0
+     88          /*********************************************************************
+     89           * MACROS
+     90           */
+     91          
+     92          /*********************************************************************
+     93           * CONSTANTS
+     94           */
+     95          
+     96          /*********************************************************************
+     97           * TYPEDEFS
+     98           */
+     99          
+    100          /*********************************************************************
+    101           * GLOBAL VARIABLES
+    102           */
+    103          // This list should be filled with Application specific Cluster IDs.
+    104          const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
+    105          {
+    106            GENERICAPP_CLUSTERID
+    107          };
+    108          
+    109          const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
+    110          {
+    111            GENERICAPP_ENDPOINT,              //  int Endpoint;
+    112            GENERICAPP_PROFID,                //  uint16 AppProfId[2];
+    113            GENERICAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+    114            GENERICAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+    115            GENERICAPP_FLAGS,                 //  int   AppFlags:4;
+    116            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    117            (cId_t *)GenericApp_ClusterList,  //  byte *pAppInClusterList;
+    118            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    119            (cId_t *)GenericApp_ClusterList   //  byte *pAppInClusterList;
+    120          };
+    121          
+    122          // This is the Endpoint/Interface description.  It is defined here, but
+    123          // filled-in in GenericApp_Init().  Another way to go would be to fill
+    124          // in the structure here and make it a "const" (in code space).  The
+    125          // way it's defined in this sample app it is define in RAM.
+    126          endPointDesc_t GenericApp_epDesc;
+    127          
+    128          /*********************************************************************
+    129           * EXTERNAL VARIABLES
+    130           */
+    131          
+    132          /*********************************************************************
+    133           * EXTERNAL FUNCTIONS
+    134           */
+    135          
+    136          /*********************************************************************
+    137           * LOCAL VARIABLES
+    138           */
+    139          byte GenericApp_TaskID;   // Task ID for internal task/event processing
+    140                                    // This variable will be received when
+    141                                    // GenericApp_Init() is called.
+    142          devStates_t GenericApp_NwkState;
+    143          
+    144          
+    145          byte GenericApp_TransID;  // This is the unique message ID (counter)
+    146          
+    147          afAddrType_t GenericApp_DstAddr;
+    148          
+    149          /*********************************************************************
+    150           * LOCAL FUNCTIONS
+    151           */
+    152          static void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg );
+    153          static void GenericApp_HandleKeys( byte shift, byte keys );
+    154          static void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    155          static void GenericApp_SendTheMessage( void );
+    156          
+    157          #if defined( IAR_ARMCM3_LM )
+    158          static void GenericApp_ProcessRtosMessage( void );
+    159          #endif
+    160          
+    161          /*********************************************************************
+    162           * NETWORK LAYER CALLBACKS
+    163           */
+    164          
+    165          /*********************************************************************
+    166           * PUBLIC FUNCTIONS
+    167           */
+    168          
+    169          /*********************************************************************
+    170           * @fn      GenericApp_Init
+    171           *
+    172           * @brief   Initialization function for the Generic App Task.
+    173           *          This is called during initialization and should contain
+    174           *          any application specific initialization (ie. hardware
+    175           *          initialization/setup, table initialization, power up
+    176           *          notificaiton ... ).
+    177           *
+    178           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    179           *                    used to send messages and set timers.
+    180           *
+    181           * @return  none
+    182           */
+    183          void GenericApp_Init( uint8 task_id )
+    184          {
+    185            GenericApp_TaskID = task_id;
+    186            GenericApp_NwkState = DEV_INIT;
+    187            GenericApp_TransID = 0;
+    188          
+    189            // Device hardware initialization can be added here or in main() (Zmain.c).
+    190            // If the hardware is application specific - add it here.
+    191            // If the hardware is other parts of the device add it in main().
+    192          
+    193            GenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;//单播
+    194            GenericApp_DstAddr.endPoint =10;//发到协调器的10号端点
+    195            GenericApp_DstAddr.addr.shortAddr = 0x0000;
+    196          
+    197            // Fill out the endpoint description.
+    198            GenericApp_epDesc.endPoint = GENERICAPP_ENDPOINT;
+    199            GenericApp_epDesc.task_id = &GenericApp_TaskID;
+    200            GenericApp_epDesc.simpleDesc
+    201                      = (SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
+    202            GenericApp_epDesc.latencyReq = noLatencyReqs;
+    203          
+    204            // Register the endpoint description with the AF
+    205            afRegister( &GenericApp_epDesc );
+    206          
+    207            // Register for all key events - This app will handle all key events
+    208            RegisterForKeys( GenericApp_TaskID );
+    209          
+    210            // Update the display
+    211          #if defined ( LCD_SUPPORTED )
+    212            HalLcdWriteString( "GenericApp", HAL_LCD_LINE_1 );
+    213          #endif
+    214          
+    215            ZDO_RegisterForZDOMsg( GenericApp_TaskID, End_Device_Bind_rsp );
+    216            ZDO_RegisterForZDOMsg( GenericApp_TaskID, Match_Desc_rsp );
+    217          
+    218          #if defined( IAR_ARMCM3_LM )
+    219            // Register this task with RTOS task initiator
+    220            RTOS_RegisterApp( task_id, GENERICAPP_RTOS_MSG_EVT );
+    221          #endif
+    222          }
+    223          
+    224          /*********************************************************************
+    225           * @fn      GenericApp_ProcessEvent
+    226           *
+    227           * @brief   Generic Application Task event processor.  This function
+    228           *          is called to process all events for the task.  Events
+    229           *          include timers, messages and any other user defined events.
+    230           *
+    231           * @param   task_id  - The OSAL assigned task ID.
+    232           * @param   events - events to process.  This is a bit map and can
+    233           *                   contain more than one event.
+    234           *
+    235           * @return  none
+    236           */
+    237          uint16 GenericApp_ProcessEvent( uint8 task_id, uint16 events )
+    238          {
+    239            afIncomingMSGPacket_t *MSGpkt;
+    240            afDataConfirm_t *afDataConfirm;
+    241          
+    242            // Data Confirmation message fields
+    243            byte sentEP;
+    244            ZStatus_t sentStatus;
+    245            byte sentTransID;       // This should match the value sent
+    246            (void)task_id;  // Intentionally unreferenced parameter
+    247          
+    248            if ( events & SYS_EVENT_MSG )
+    249            {
+    250              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+    251              while ( MSGpkt )
+    252              {
+    253                switch ( MSGpkt->hdr.event )
+    254                {
+    255                  case ZDO_CB_MSG:
+    256                    GenericApp_ProcessZDOMsgs( (zdoIncomingMsg_t *)MSGpkt );
+    257                    break;
+    258          
+    259                  case KEY_CHANGE:
+    260                    GenericApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    261                    break;
+    262          
+    263                  case AF_DATA_CONFIRM_CMD:
+    264                    // This message is received as a confirmation of a data packet sent.
+    265                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    266                    // The message fields are defined in AF.h
+    267                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    268                    sentEP = afDataConfirm->endpoint;
+    269                    sentStatus = afDataConfirm->hdr.status;
+    270                    sentTransID = afDataConfirm->transID;
+    271                    (void)sentEP;
+    272                    (void)sentTransID;
+    273          
+    274                    // Action taken when confirmation is received.
+    275                    if ( sentStatus != ZSuccess )
+    276                    {
+    277                      // The data wasn't delivered -- Do something
+    278                    }
+    279                    break;
+    280          
+    281                  case AF_INCOMING_MSG_CMD:
+    282                    GenericApp_MessageMSGCB( MSGpkt );
+    283                    break;
+    284          
+    285                  case ZDO_STATE_CHANGE:
+    286                    GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    287                    if ( (GenericApp_NwkState == DEV_ZB_COORD)
+    288                        || (GenericApp_NwkState == DEV_ROUTER)
+    289                        || (GenericApp_NwkState == DEV_END_DEVICE) )
+    290                    {
+    291                      // Start sending "the" message in a regular interval.
+    292                      osal_start_timerEx( GenericApp_TaskID,
+    293                                          GENERICAPP_SEND_MSG_EVT,
+    294                                          GENERICAPP_SEND_MSG_TIMEOUT );
+    295                    }
+    296                    break;
+    297          
+    298                  default:
+    299                    break;
+    300                }
+    301          
+    302                // Release the memory
+    303                osal_msg_deallocate( (uint8 *)MSGpkt );
+    304          
+    305                // Next
+    306                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+    307              }
+    308          
+    309              // return unprocessed events
+    310              return (events ^ SYS_EVENT_MSG);
+    311            }
+    312          
+    313            // Send a message out - This event is generated by a timer
+    314            //  (setup in GenericApp_Init()).
+    315            if ( events & GENERICAPP_SEND_MSG_EVT )
+    316            {
+    317              // Send "the" message
+    318              GenericApp_SendTheMessage();
+    319          
+    320              // Setup to send message again
+    321              osal_start_timerEx( GenericApp_TaskID,
+    322                                  GENERICAPP_SEND_MSG_EVT,
+    323                                  GENERICAPP_SEND_MSG_TIMEOUT );
+    324          
+    325              // return unprocessed events
+    326              return (events ^ GENERICAPP_SEND_MSG_EVT);
+    327            }
+    328          
+    329            
+    330          #if defined( IAR_ARMCM3_LM )
+    331            // Receive a message from the RTOS queue
+    332            if ( events & GENERICAPP_RTOS_MSG_EVT )
+    333            {
+    334              // Process message from RTOS queue
+    335              GenericApp_ProcessRtosMessage();
+    336          
+    337              // return unprocessed events
+    338              return (events ^ GENERICAPP_RTOS_MSG_EVT);
+    339            }
+    340          #endif
+    341          
+    342            // Discard unknown events
+    343            return 0;
+    344          }
+    345          
+    346          /*********************************************************************
+    347           * Event Generation Functions
+    348           */
+    349          
+    350          /*********************************************************************
+    351           * @fn      GenericApp_ProcessZDOMsgs()
+    352           *
+    353           * @brief   Process response messages
+    354           *
+    355           * @param   none
+    356           *
+    357           * @return  none
+    358           */
+    359          static void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
+    360          {
+    361            switch ( inMsg->clusterID )
+    362            {
+    363              case End_Device_Bind_rsp:
+    364                if ( ZDO_ParseBindRsp( inMsg ) == ZSuccess )
+    365                {
+    366                  // Light LED
+    367                  HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+    368                }
+    369          #if defined( BLINK_LEDS )
+    370                else
+    371                {
+    372                  // Flash LED to show failure
+    373                  HalLedSet ( HAL_LED_4, HAL_LED_MODE_FLASH );
+    374                }
+    375          #endif
+    376                break;
+    377          
+    378              case Match_Desc_rsp:
+    379                {
+    380                  ZDO_ActiveEndpointRsp_t *pRsp = ZDO_ParseEPListRsp( inMsg );
+    381                  if ( pRsp )
+    382                  {
+    383                    if ( pRsp->status == ZSuccess && pRsp->cnt )
+    384                    {
+    385                      GenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    386                      GenericApp_DstAddr.addr.shortAddr = pRsp->nwkAddr;
+    387                      // Take the first endpoint, Can be changed to search through endpoints
+    388                      GenericApp_DstAddr.endPoint = pRsp->epList[0];
+    389          
+    390                      // Light LED
+    391                      HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+    392                    }
+    393                    osal_mem_free( pRsp );
+    394                  }
+    395                }
+    396                break;
+    397            }
+    398          }
+    399          
+    400          /*********************************************************************
+    401           * @fn      GenericApp_HandleKeys
+    402           *
+    403           * @brief   Handles all key events for this device.
+    404           *
+    405           * @param   shift - true if in shift/alt.
+    406           * @param   keys - bit field for key events. Valid entries:
+    407           *                 HAL_KEY_SW_4
+    408           *                 HAL_KEY_SW_3
+    409           *                 HAL_KEY_SW_2
+    410           *                 HAL_KEY_SW_1
+    411           *
+    412           * @return  none
+    413           */
+    414          static void GenericApp_HandleKeys( uint8 shift, uint8 keys )
+    415          {
+    416            zAddrType_t dstAddr;
+    417          
+    418            // Shift is used to make each button/switch dual purpose.
+    419            if ( shift )
+    420            {
+    421              if ( keys & HAL_KEY_SW_1 )
+    422              {
+    423              }
+    424              if ( keys & HAL_KEY_SW_2 )
+    425              {
+    426              }
+    427              if ( keys & HAL_KEY_SW_3 )
+    428              {
+    429              }
+    430              if ( keys & HAL_KEY_SW_4 )
+    431              {
+    432              }
+    433            }
+    434            else
+    435            {
+    436              if ( keys & HAL_KEY_SW_1 )
+    437              {
+    438                // Since SW1 isn't used for anything else in this application...
+    439          #if defined( SWITCH1_BIND )
+    440                // we can use SW1 to simulate SW2 for devices that only have one switch,
+    441                keys |= HAL_KEY_SW_2;
+    442          #elif defined( SWITCH1_MATCH )
+    443                // or use SW1 to simulate SW4 for devices that only have one switch
+    444                keys |= HAL_KEY_SW_4;
+    445          #endif
+    446              }
+    447          
+    448              if ( keys & HAL_KEY_SW_2 )
+    449              {
+    450                HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+    451          
+    452                // Initiate an End Device Bind Request for the mandatory endpoint
+    453                dstAddr.addrMode = Addr16Bit;
+    454                dstAddr.addr.shortAddr = 0x0000; // Coordinator
+    455                ZDP_EndDeviceBindReq( &dstAddr, NLME_GetShortAddr(),
+    456                                      GenericApp_epDesc.endPoint,
+    457                                      GENERICAPP_PROFID,
+    458                                      GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    459                                      GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    460                                      FALSE );
+    461              }
+    462          
+    463              if ( keys & HAL_KEY_SW_3 )
+    464              {
+    465              }
+    466          
+    467              if ( keys & HAL_KEY_SW_4 )
+    468              {
+    469                HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+    470                // Initiate a Match Description Request (Service Discovery)
+    471                dstAddr.addrMode = AddrBroadcast;
+    472                dstAddr.addr.shortAddr = NWK_BROADCAST_SHORTADDR;
+    473                ZDP_MatchDescReq( &dstAddr, NWK_BROADCAST_SHORTADDR,
+    474                                  GENERICAPP_PROFID,
+    475                                  GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    476                                  GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    477                                  FALSE );
+    478              }
+    479            }
+    480          }
+    481          
+    482          /*********************************************************************
+    483           * LOCAL FUNCTIONS
+    484           */
+    485          
+    486          /*********************************************************************
+    487           * @fn      GenericApp_MessageMSGCB
+    488           *
+    489           * @brief   Data message processor callback.  This function processes
+    490           *          any incoming data - probably from other devices.  So, based
+    491           *          on cluster ID, perform the intended action.
+    492           *
+    493           * @param   none
+    494           *
+    495           * @return  none
+    496           */
+    497          static void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+    498          {
+    499            switch ( pkt->clusterId )
+    500            {
+    501              case GENERICAPP_CLUSTERID:
+    502                // "the" message
+    503          #if defined( LCD_SUPPORTED )
+    504                HalLcdWriteScreen( (char*)pkt->cmd.Data, "rcvd" );
+    505          #elif defined( WIN32 )
+    506                WPRINTSTR( pkt->cmd.Data );
+    507          #endif
+    508                break;
+    509            }
+    510          }
+    511          
+    512          /*********************************************************************
+    513           * @fn      GenericApp_SendTheMessage
+    514           *
+    515           * @brief   Send "the" message.
+    516           *
+    517           * @param   none
+    518           *
+    519           * @return  none
+    520           */ 
+    521          static void GenericApp_SendTheMessage( void )
+    522          {
+    523             unsigned char theMessageData[10];
+    524            DHT11();//温湿度 值
+                   ^
+Error[Pe223]: function "DHT11" declared implicitly
+    525           theMessageData[0]='R';
+    526           theMessageData[1]=wendu_shi+0x30;
+    527           theMessageData[2]=wendu_ge+0x30; 
+    528           theMessageData[3]=shidu_shi+0x30;
+    529           theMessageData[4]=shidu_ge+0x30;
+    530           theMessageData[5]=0;
+    531          
+    532            if ( AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,//发送目标地址以及源地址
+    533                                 GENERICAPP_ROT,//需要指定簇，有簇对应才能够对应节点数据
+    534                                 (byte)osal_strlen( theMessageData ) ,
+                                                           ^
+Warning[Pe167]: argument of type "unsigned char *" is incompatible with
+          parameter of type "char *"
+    535                                 (byte *)&theMessageData,
+    536                                 &GenericApp_TransID,
+    537                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    538            {
+    539              // Successfully requested to be sent.
+    540            }
+    541            else
+    542            {
+    543              // Error occurred in request to send.
+    544            }
+    545          }
+    546          
+    547          #if defined( IAR_ARMCM3_LM )
+    548          /*********************************************************************
+    549           * @fn      GenericApp_ProcessRtosMessage
+    550           *
+    551           * @brief   Receive message from RTOS queue, send response back.
+    552           *
+    553           * @param   none
+    554           *
+    555           * @return  none
+    556           */
+    557          static void GenericApp_ProcessRtosMessage( void )
+    558          {
+    559            osalQueue_t inMsg;
+    560          
+    561            if ( osal_queue_receive( OsalQueue, &inMsg, 0 ) == pdPASS )
+    562            {
+    563              uint8 cmndId = inMsg.cmnd;
+    564              uint32 counter = osal_build_uint32( inMsg.cbuf, 4 );
+    565          
+    566              switch ( cmndId )
+    567              {
+    568                case CMD_INCR:
+    569                  counter += 1;  /* Increment the incoming counter */
+    570                                 /* Intentionally fall through next case */
+    571          
+    572                case CMD_ECHO:
+    573                {
+    574                  userQueue_t outMsg;
+    575          
+    576                  outMsg.resp = RSP_CODE | cmndId;  /* Response ID */
+    577                  osal_buffer_uint32( outMsg.rbuf, counter );    /* Increment counter */
+    578                  osal_queue_send( UserQueue1, &outMsg, 0 );  /* Send back to UserTask */
+    579                  break;
+    580                }
+    581                
+    582                default:
+    583                  break;  /* Ignore unknown command */    
+    584              }
+    585            }
+    586          }
+    587          #endif
+    588          
+    589          /*********************************************************************
+    590           */
+
+Errors: 1
+Warnings: 1
